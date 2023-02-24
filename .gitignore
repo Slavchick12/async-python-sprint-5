@@ -2,3 +2,10 @@
 .idea/
 __pycache__/
 *.pyc
+
+venv/
+.vscode/
+.env
+migrations/versions/
+loggs.log
+files/
