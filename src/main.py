@@ -4,7 +4,7 @@ import uvicorn
 from fastapi import FastAPI, Request, Response, status
 from fastapi.responses import ORJSONResponse
 
-from src.api.v1 import base, users, files
+from src.api.v1 import base, files, users
 from src.core.config import app_settings
 
 app = FastAPI(

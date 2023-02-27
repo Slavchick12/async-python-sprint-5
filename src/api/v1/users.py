@@ -1,8 +1,7 @@
 import secrets
-from typing import Any, AnyStr, Dict, List
+from typing import Any, Dict
 
-from fastapi import (APIRouter, Depends, HTTPException, Request, responses,
-                     status)
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 

@@ -13,16 +13,6 @@ class AppSettings(BaseSettings):
     PROJECT_HOST = os.getenv('PROJECT_HOST', '0.0.0.0')
     PROJECT_PORT = int(os.getenv('PROJECT_PORT', '8000'))
     DB_WAS_PING = 'The database was ping'
-    DB_IS_OK = 'There is nothing wrong with the database'
-    DB_WRONG_OR_EMPTY = 'There is something wrong with the database or it is empty'
-    URLS_RECEIVED = 'All short non-deleted urls were received!'
-    URL_NOT_FOUND = 'Url not found!'
-    URL_WAS_DELETED = 'Url {url} was deleted!'
-    URL_RECEIVED = 'Url {url} successfully received!'
-    ENTRY_WAS_DELETED = 'Database entry with id={id} was deleted!'
-    REQUEST_STATUS = 'Info request per url {url}'
-    ALL_INFO_RECEIVED = 'All info per url {url} received'
-    VISITS_RECEIVED = 'Visits per url {url} received'
     USER_REGISTER = 'User register request'
     USER_AUTH = 'User authentication request'
     NAME_EXISTS = 'This name already exists'
@@ -31,6 +21,12 @@ class AppSettings(BaseSettings):
     TOKEN_WAS_GENERATED = 'Auth token was generated!'
     UNATHORIZED = 'Unauthorized'
     DEFAULT_FILES_FOLDER = 'files'
+    FILE_NOT_EXIST = 'The file "{filename}" on the path "{path}" does not exist'
+    ZIP_FORMAT = 'zip'
+    TYPE_OCTET_STREAM = 'application/octet-stream'
+    DOT = '.'
+    NO_ACCESS = 'No access'
+    DB_CONNECTION = 'DB connection'
 
     class Config:
         env_file = '.env'

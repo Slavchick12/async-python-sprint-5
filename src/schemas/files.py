@@ -1,11 +1,12 @@
 from datetime import datetime
-from fastapi import UploadFile
+
 from pydantic import BaseModel
 
 
 class FileBase(BaseModel):
     path: str
     size: int
+    owner: int
 
 
 class FileCreate(FileBase):
