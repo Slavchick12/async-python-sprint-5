@@ -6,12 +6,12 @@ from pydantic import BaseSettings, PostgresDsn
 
 class AppSettings(BaseSettings):
     app_title: str = 'UrlsApp'
+    project_name: str = 'library'
+    project_host: str = '0.0.0.0'
+    project_port: int = 8000
     database_dsn: PostgresDsn = os.getenv('DATABASE_DSN')
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     BLACK_LIST = []
-    PROJECT_NAME = os.getenv('PROJECT_NAME', 'library')
-    PROJECT_HOST = os.getenv('PROJECT_HOST', '0.0.0.0')
-    PROJECT_PORT = int(os.getenv('PROJECT_PORT', '8000'))
     DB_WAS_PING = 'The database was ping'
     USER_REGISTER = 'User register request'
     USER_AUTH = 'User authentication request'

@@ -29,4 +29,4 @@ async def add_process_time_header(request: Request, call_next):
 
 
 if __name__ == '__main__':
-    uvicorn.run('main:app', host=app_settings.PROJECT_HOST, port=app_settings.PROJECT_PORT)
+    uvicorn.run('main:app', host=app_settings.project_host, port=app_settings.project_port)

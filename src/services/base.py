@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 from typing import Any, AnyStr, Dict, Generic, List, Optional, Type, TypeVar, Union
 
 from fastapi.encoders import jsonable_encoder
@@ -13,20 +14,25 @@ CreateSchemaType = TypeVar('CreateSchemaType', bound=BaseModel)
 UpdateSchemaType = TypeVar('UpdateSchemaType', bound=BaseModel)
 
 
-class Repository:
+class Repository(ABC):
 
+    @abstractmethod
     def get(self, *args, **kwargs):
         raise NotImplementedError
 
+    @abstractmethod
     def get_multi(self, *args, **kwargs):
         raise NotImplementedError
 
+    @abstractmethod
     def create(self, *args, **kwargs):
         raise NotImplementedError
 
+    @abstractmethod
     def update(self, *args, **kwargs):
         raise NotImplementedError
 
+    @abstractmethod
     def delete(self, *args, **kwargs):
         raise NotImplementedError
 
